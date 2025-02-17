@@ -1,0 +1,31 @@
+The REST API uses Node.js, Express and MongoDB as the tech stack.
+
+The installed dependencies are express as the backend framework,
+and mongoose as the ORM to interract with the MongoDB database.
+
+Furthermore I also used nodemon and dotenv as dev dependencies.
+Nodemon restarts the dev server upon saving changes to the files,
+and dotenv allows us to declare environment variables in a .env file,
+where we store the database url.
+
+Git was also used for version control, and thereforea .gitignore file is added
+to ignore the node_modules folder to avoid unnecessary uploads to GitHub,
+and the .env file is ignored for security reasons.
+
+The source code consists of the server.js, routes/vehicle.js, models/vehicle.js files.
+
+In the server.js file, we:
+    - set up the express app
+    - connect to our database
+    - give feedback about the db connection
+    - tell express where to look for the routes
+    - start listening for requests on port 3000
+
+In the routes/vehicle.js file, we:
+    - set up the express router
+    - create the API endpoints with the requested business logic
+    - export the router
+
+In the models/vehicle.js file, we:
+    - create the mongoose vehicle model
+    - export the mongoose vehicle model
